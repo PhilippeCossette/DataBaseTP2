@@ -1,0 +1,361 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8;
+    color: #333;
+}
+
+/* Header and Navigation Styles */
+nav {
+    background-color: #007BFF; /* Blue background */
+    padding: 10px 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav li a {
+    color: white;
+    text-transform: uppercase;
+    padding: 12px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+nav li a:hover {
+    background-color: #0056b3; /* Darker blue */
+}
+
+/* Main Content */
+.main-content {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Client Cards Layout */
+.client-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.client-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: calc(33.333% - 20px); /* 3 cards per row */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.client-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.client-name {
+    font-size: 1.4rem;
+    color: #007BFF; /* Blue color */
+    margin-bottom: 10px;
+}
+
+.client-name a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+}
+
+.client-name a:hover {
+    text-decoration: underline;
+}
+
+.client-address,
+.client-phone,
+.client-zipcode,
+.client-email,
+.client-city {
+    font-size: 1rem;
+    margin: 5px 0;
+    color: #666;
+}
+
+/* Button Styles */
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    background-color: #007BFF; /* Blue button */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Darker blue */
+}
+
+.new-client-btn {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Client Show Page */
+.client-show {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.client-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.client-info {
+    margin-bottom: 30px;
+}
+
+.client-info-item {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.client-info-value {
+    font-weight: bold;
+    color: #007BFF;
+}
+
+.client-actions {
+    text-align: center;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 5px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.btn-edit {
+    background-color: #28a745; /* Green for edit */
+}
+
+.btn-edit:hover {
+    background-color: #218838;
+}
+
+.btn-delete {
+    background-color: #dc3545; /* Red for delete */
+}
+
+.btn-delete:hover {
+    background-color: #c82333;
+}
+
+.delete-form {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+/* Edit Client Page */
+.edit-client {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container {
+    margin-bottom: 20px;
+}
+
+.form-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.client-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.error-message {
+    color: #dc3545;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+
+.btn-submit {
+    background-color: #28a745; /* Green for submit */
+}
+
+.btn-submit:hover {
+    background-color: #218838;
+}
+
+.client-create {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.form-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group select {
+    width: 97%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.form-group input[type="text"], .form-group input[type="email"], .form-group select {
+    background-color: #fff;
+    color: #333;
+}
+
+.error {
+    font-size: 0.9rem;
+    color: #d9534f;
+}
+
+.form-submit {
+    text-align: center;
+}
+
+.form-submit .btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-submit .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Adjustments for form elements */
+.form-group input[type="text"], .form-group input[type="email"] {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+}
+
+.form-group select {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+}
+
+/* Optional: Adding spacing between sections */
+.form-group:not(:last-child) {
+    margin-bottom: 25px;
+}
+
+
+/* Footer Styles */
+footer {
+    background-color: #007BFF; /* Blue footer */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.1);
+}

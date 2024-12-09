@@ -1,0 +1,6 @@
+Base de donne pour location de voiture. Contient table clients, invoice, product et city.
+
+GitHub:https://github.com/PhilippeCossette/DataBaseTP2
+
+
+WEBDEV: TO BE ADDED
