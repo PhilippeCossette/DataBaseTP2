@@ -5,11 +5,20 @@ use App\Models\Client;
 use App\Models\City;
 use App\Providers\View;
 use App\Providers\Validator;
+use App\Providers\Auth;
 
 class ClientController {
 
+    public function __construct(){
+        Auth::session();
+    }
+
     // List all clients with city information
     public function index(){
+
+        LogController::logVisit("Clients List");
+        
+
         $client = new Client;
         $clients = $client->joinSelection('city', 'id', 'city_id', 'name', 'ASC', 'city_name');
         return $clients ? View::render('client/index', ['clients'=>$clients]) : View::render('error', ['message' => 'No clients found']);
@@ -17,6 +26,8 @@ class ClientController {
 
     // Show client details with city
     public function show($data = []){
+        LogController::logVisit("Client Details");
+
         if(isset($data['id'])){
             $client = new Client;
             $selectId = $client->selectId($data['id']);
@@ -31,6 +42,13 @@ class ClientController {
 
     // Display form to create a new client
     public function create(){
+
+        LogController::logVisit("Create Client");
+
+        if (!isset($_SESSION['privilege_id']) || $_SESSION['privilege_id'] != 1) {
+            header("Location: " . BASE . "/clients");
+            exit;
+        }
         $city = new City;
         $cities = $city->select('name');
         return View::render('client/create', ['cities' => $cities]);
@@ -61,6 +79,9 @@ class ClientController {
 
     // Display form to edit client data
     public function edit($data = []){
+
+        LogController::logVisit("Client Edit");
+
         if(isset($data['id'])){
             $client = new Client;
             $selectId = $client->selectId($data['id']);

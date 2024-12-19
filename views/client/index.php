@@ -16,9 +16,11 @@
             </div>
         {% endfor %}
     </div>
+    {% if session.privilege_id == 1 %}
     <div class="new-client-btn">
         <a href="{{base}}/client/create" class="btn">New Client</a>
     </div>
+    {% endif %}
 </main>
 
 {{ include('layouts/footer.php')}}

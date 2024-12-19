@@ -9,9 +9,19 @@
 <body>
      <nav>
         <ul>
+            {% if guest %}
+            <li><a href="{{base}}/login">Login</a></li>
+            {% else %}
             <li><a href="{{base}}/clients">Clients</a></li>
-            <li><a href="#">Users</a></li>
-            <li><a href="#">Login</a></li>
+            {% if session.privilege_id == 1 %}
+            <li><a href="{{base}}/user/create">Users</a></li>
+            <li><a href="{{base}}/logs">Logs</a></li>
+            {% endif %}
+            <li><a href="{{base}}/logout">Logout</a></li>
+            {% endif %}
         </ul>
      </nav>
      <main>
+        {% if guest is empty %}
+            Hello {{ session.user_name }}
+        {% endif %}
